@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Foam</title>
+</head>
+<body>
+
+<form action="." method="post">
+    {% csrf_token %}
+  First name:<br>
+  <input type="text" name="First name" >
+  <br>
+  Last name:<br>
+  <input type="text" name="Last name" >
+  <br>
+  Email Id:<br>
+  <input type="email" name="Email Id" >
+  <br>
+  Username:<br>
+  <input type="text" name="Username" >
+  <br>
+  Password:<br>
+  <input type="Password" name="Password" >
+  <br>
+  Confirm Password:<br>
+  <input type="Password" name="Confirm Password" >
+  <br><br>
+  <input type="submit" value="Register">
+</form>
+    {% for i in messages %}
+        <h>{{ i }}</h>
+    {% endfor %}
+
+</body>
+</html>
